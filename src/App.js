@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Spinner from 'react-bootstrap/Spinner';
 import Data from './components/Data';
 import sound from './assets/nature.mp3';
+const audio = new Audio(sound);
 
 var i = 0;
 
@@ -50,7 +51,6 @@ export default function App() {
   }
 
   const search = evt => {
-    const audio = new Audio(sound);
     audio.play();
     audio.loop=true;
     if(evt.key === 'Enter') {
