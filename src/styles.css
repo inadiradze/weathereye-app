@@ -1,0 +1,224 @@
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #232323;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+body {
+  background-color: #181818;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  color: black;
+  padding: 65px;
+}
+
+.app {
+  font-family: "montseratt", sans-serif;
+  color: white;
+  transition: 0.4 ease-out;
+}
+
+.app.blur {
+  backdrop-filter: blur(5px);
+}
+
+.bg {
+  background-image: url('./assets/wallpaper.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box .search-bar:focus {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 90%;
+  padding: 15px;
+  font-size: 14px;
+  color: #fff;
+  appearance: none;
+  border: none;
+  outline: none;
+  background-color: #191919;
+  border-radius: 0px 0px 16px 16px;
+  margin-top: -65px;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.05);
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar::placeholder {
+  color: #fff;
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 29px;
+  text-align: center;
+  box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.4);
+}
+
+.location-box span {
+  color: #4b7b4b;
+  text-shadow: none;
+  margin-left: 2px;
+}
+
+.location-box .date {
+  color: #fff;
+  font-size: 17px;
+  font-style: italic;
+  text-align: center;
+}
+
+.location {
+  margin-left: 50%;
+  transform: translateX(-50%);
+  line-height: 50px;
+  width: max-content;
+  max-width: 100%;
+  padding: 12px;
+  background-color: #191919;
+}
+
+.date-div{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: #191919;
+  max-width: 100px;
+  padding: 4px;
+  box-shadow: 0px 0px 10px 9px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.weather-box .temp {
+  position: relative;
+  display: inline-block;
+  margin: 22px auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 15px 25px;
+  color: #fff;
+  font-size: 97px;
+  font-weight: 900;
+  max-width: 100%;
+  word-wrap: break-word;
+  text-align: center;
+  box-shadow: 6px 6px 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: white;
+  margin-top: 19px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  padding: 6px;
+  background-color: black;
+  width: max-content;
+  max-width: 100%;
+  line-height: 50px;
+}
+
+.weather-div div {
+  box-shadow: 0px 0px 10px 7px rgba(0, 0, 0, 0.2);
+}
+
+.error p{
+  background-color: #191919;
+  color: white;
+  text-align: center;
+  max-width: 100%;
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  padding: 10px;
+  box-shadow: 0px 0px 20px 8px rgba(0, 0, 0, 0.4);
+}
+
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+}
+
+.visually-hidden {
+  color: white;
+}
+
+@media(min-width: 640px) {
+
+  .location {
+    width: max-content;
+    padding: 15px;
+  }
+  
+  .weather-box {
+    margin-top: 4px;
+  }
+
+  .data-div {
+    margin-top: -22px;
+  }
+
+  .app {
+    background-position: top;
+  }
+
+  .search-box .search-bar {
+    width: 30%;
+  }
+
+  .search-box .search-bar:focus {
+    transform: scale(1.1);
+    color: #fff;
+  }
+
+  .search-box {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media(min-height: 1000px) {
+  .data-div {
+    margin-top: 150px;
+  }
+}
